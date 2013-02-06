@@ -9,9 +9,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Here are the answers...</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1 align="center">Answers!!</h1>
+          <%
+            String title = request.getAttribute("title").toString();
+            String answer = request.getAttribute("answer").toString();
+            String formula = request.getAttribute("formula").toString();
+        %>
+        <h1><%= title %></h1>
+        <p>You submitted <%= formula %></p>
+        <p>The answer is: <%= answer %></p>
+        <br/>
+        <p><a href="index.jsp">Back to Calculator Home</a></p>
     </body>
 </html>
