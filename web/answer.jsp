@@ -14,9 +14,16 @@
     <body>
         <h1 align="center">Answers!!</h1>
           <%
+         
             String title = request.getAttribute("title").toString();
             String answer = request.getAttribute("answer").toString();
             String formula = request.getAttribute("formula").toString();
+            try{
+                       }
+          catch(NullPointerException ne){
+              out.println("Cannot be null!! Close, but no cigar!!");
+              
+          }
         %>
         <h1><%= title %></h1>
         <p>You submitted <%= formula %></p>
